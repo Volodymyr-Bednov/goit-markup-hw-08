@@ -60,11 +60,16 @@ a {
 }
 
 .container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+  width: 100%;
   margin: 0 auto;
   /* outline: 2px solid orange; */
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .section {
@@ -245,8 +250,9 @@ a {
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  max-width: 480px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
   background-color: var(--secondary-background);
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-bg.jpg);
@@ -254,35 +260,65 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  max-width: 1600px;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+    padding-top: 204px;
+    padding-bottom: 204px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero__titel {
-  max-width: 696px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
+  max-width: 260px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 18px;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-text-color);
 }
-
-.hero__btn {
-  padding: 10px 32px;
-  border-color: transparent;
+@media screen and (min-width: 480px) {
+  .hero__titel {
+    font-size: 26px;
+    max-width: 360px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__titel {
+    font-size: 26px;
+    max-width: 360px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__titel {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
-.skills-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-column-gap: 30px;
-     -moz-column-gap: 30px;
-          column-gap: 30px;
+.hero__btn {
+  padding: 10px 24px;
+  font-size: 12px;
+  border: none;
+  border-color: transparent;
+}
+@media screen and (min-width: 480px) {
+  .hero__btn {
+    font-size: 16px;
+  }
 }
 
 .icon-skill-comtent {
