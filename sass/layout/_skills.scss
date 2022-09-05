@@ -4,6 +4,9 @@
     flex-wrap: wrap;
     gap: 30px;
   }
+  @include desktop {
+    flex-wrap: nowrap;
+  }
 }
 
 .skills__item {
@@ -14,7 +17,7 @@
   }
   @include desktop {
     //max-width: 270px;
-    min-width: calc((100% - 120px) / 4);
+    min-width: calc((100% - 90px) / 4);
   }
 }
 .icon-skill-comtent {

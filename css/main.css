@@ -520,6 +520,12 @@ a {
     gap: 30px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .skills-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
 
 .skills__item {
   width: 100%;
@@ -531,7 +537,7 @@ a {
 }
 @media screen and (min-width: 1200px) {
   .skills__item {
-    min-width: calc((100% - 120px) / 4);
+    min-width: calc((100% - 90px) / 4);
   }
 }
 
