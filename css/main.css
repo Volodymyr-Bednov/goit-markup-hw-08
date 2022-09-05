@@ -103,7 +103,6 @@ a {
 
 .photo {
   display: block;
-  width: 100%;
   max-width: 100%;
   height: auto;
 }
@@ -449,7 +448,7 @@ a {
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: var(--header-bg-gradient) t, url(../images/tab-header@2x.jpg);
+    background-image: var(--header-bg-gradient), url(../images/tab-header@2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {

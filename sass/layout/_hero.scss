@@ -18,7 +18,7 @@
     padding-top: 204px;
     padding-bottom: 204px;
     @include retina {
-      background-image: var(--header-bg-gradient) t,
+      background-image: var(--header-bg-gradient),
         url(../images/tab-header@2x.jpg);
     }
   }
