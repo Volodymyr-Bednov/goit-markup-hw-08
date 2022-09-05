@@ -18,8 +18,7 @@
 }
 .modal {
   position: absolute;
-  width: 528px;
-  min-height: 581px;
+  width: 300px;
   padding: 40px;
   top: 50%;
   left: 50%;
@@ -33,6 +32,17 @@
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include mobile {
+    width: 450px;
+  }
+  @include tablet {
+    gap: 0px;
+  }
+  @include desktop {
+    width: 528px;
+    min-height: 581px;
+  }
 
   &-backdrop.is-hidden & {
     transform: translate(-50%, -50%) scale(0);
@@ -73,11 +83,15 @@
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
 
   color: var(--title-text-color);
+
+  @include desktop {
+    line-height: 1.15;
+  }
 }
 
 .modal-input-wrap {
@@ -96,8 +110,8 @@
 }
 .modal-form-input {
   width: 100%;
-  padding-top: 11px;
-  padding-bottom: 11px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   padding-left: 42px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -150,12 +164,17 @@
 
 .modal-check-lable {
   display: flex;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.03em;
 
   color: var(--primary-text-color);
   justify-content: center;
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .policy-contract {

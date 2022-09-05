@@ -48,7 +48,7 @@
           </ul>
         </nav>
         <ul class="contacts list">
-          <li>
+          <li class="contacts__item">
             <a
               class="contacts__link event-link"
               href="mailto:info@devstudio.com"
@@ -60,7 +60,7 @@
               info@devstudio.com</a
             >
           </li>
-          <li>
+          <li class="contacts__item">
             <a class="contacts__link event-link" href="tel:+380961111111">
               <svg class="contacts__icon" width="10px" height="16px">
                 <use href="./images/icons.svg#icon-smartphone"></use>
@@ -69,6 +69,71 @@
             >
           </li>
         </ul>
+        <!-- MOB-MENU -->
+        <button class="menu-btn menu-btn__close" type="button" data-menu-open>
+          <svg class="menu-btn__icon" width="40px" height="40px">
+            <use href="./images/icons.svg#icon-menu_40"></use>
+          </svg>
+        </button>
+        <div class="mob-menu is-hidden" data-menu>
+          <div class="container">
+            <div class="mob-menu__top">
+              <button class="menu-btn" type="button" data-menu-close>
+                <svg class="menu-btn__icon" width="40px" height="40px">
+                  <use href="./images/icons.svg#icon-close_40"></use>
+                </svg>
+              </button>
+              <nav class="mob-nav">
+                <ul class="mob-nav__list list">
+                  <li class="mob-nav__item">
+                    <a class="mob-nav__link" href="./index.html">Студія</a>
+                  </li>
+                  <li class="mob-nav__item">
+                    <a class="mob-nav__link mob-current" href="./portfolio.html"
+                      >Портфоліо</a
+                    >
+                  </li>
+                  <li class="mob-nav__item">
+                    <a class="mob-nav__link" href="#">Контакти</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="mob-menu__contacts">
+              <ul class="mob-contact list">
+                <li class="mob-contact__list">
+                  <a class="mob-contact__link-tel" href="tel:+380961111111">
+                    +38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mob-contact__list">
+                  <a
+                    class="mob-contact__link-mail"
+                    href="mailto:info@devstudio.com"
+                    lang="en"
+                  >
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <ul class="mob-soc-nets list">
+              <li class="mob-soc-nets__item">
+                <a href="" class="smob-soc-nets__link">Instagram</a>
+              </li>
+              <li class="mob-soc-nets__item">
+                <a href="" class="smob-soc-nets__link">Twitter</a>
+              </li>
+              <li class="mob-soc-nets__item">
+                <a href="" class="smob-soc-nets__link">Facebook</a>
+              </li>
+              <li class="mob-soc-nets__item">
+                <a href="" class="smob-soc-nets__link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <!-- MAIN CONTENT -->
@@ -96,13 +161,33 @@
           <ul class="card list">
             <li class="card__item">
               <div class="hint">
-                <img
-                  class="photo"
-                  src="./images/img-portfolio-1.jpg"
-                  alt="Робота категорії веб-сайт"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desk-card-img1.jpg    1x,
+                      ./images/desk-card-img1@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)" />
+                  <source
+                    srcset="
+                      ./images/tab-card-img1.jpg    1x,
+                      ./images/tab-card-img1@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)" />
+                  <source
+                    srcset="
+                      ./images/mob-card-img1.jpg    1x,
+                      ./images/mob-card-img1@2x.jpg 2x
+                    "
+                    media="(max-width: 479px)" />
+                  <img
+                    class="photo"
+                    src="./images/img-portfolio-1.jpg"
+                    alt="Робота категорії веб-сайт"
+                    width="370"
+                    height="294"
+                /></picture>
+
                 <p class="hint__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -116,13 +201,37 @@
             </li>
             <li class="card__item">
               <div class="hint">
-                <img
-                  class="photo"
-                  src="./images/img-portfolio-2.jpg"
-                  alt="Робота категорії дизайн"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desk-card-img2.jpg    1x,
+                      ./images/desk-card-img2@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tab-card-img2.jpg    1x,
+                      ./images/tab-card-img2@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mob-card-img2.jpg    1x,
+                      ./images/mob-card-img2@2x.jpg 2x
+                    "
+                    media="(max-width: 479px)"
+                  />
+                  <img
+                    class="photo"
+                    src="./images/mob-card-img2.jpg"
+                    alt="Робота категорії дизайн"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
+
                 <p class="hint__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -138,13 +247,37 @@
             </li>
             <li class="card__item">
               <div class="hint">
-                <img
-                  class="photo"
-                  src="./images/img-portfolio-3.jpg"
-                  alt="Робота категорії приложение"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desk-card-img3.jpg    1x,
+                      ./images/desk-card-img3@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tab-card-img3.jpg    1x,
+                      ./images/tab-card-img3@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mob-card-img3.jpg    1x,
+                      ./images/mob-card-img3@2x.jpg 2x
+                    "
+                    media="(max-width: 479px)"
+                  />
+                  <img
+                    class="photo"
+                    src="./images/mob-card-img3.jpg"
+                    alt="Робота категорії приложение"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
+
                 <p class="hint__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -158,13 +291,32 @@
             </li>
             <li class="card__item">
               <div class="hint">
-                <img
-                  class="photo"
-                  src="./images/img-portfolio-4.jpg"
-                  alt="Робота категорії маркетинг"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desk-card-img4.jpg    1x,
+                      ./images/desk-card-img4@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)" />
+                  <source
+                    srcset="
+                      ./images/tab-card-img4.jpg    1x,
+                      ./images/tab-card-img4@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)" />
+                  <source
+                    srcset="
+                      ./images/mob-card-img4.jpg    1x,
+                      ./images/mob-card-img4@2x.jpg 2x
+                    "
+                    media="(max-width: 479px)" />
+                  <img
+                    class="photo"
+                    src="./images/mob-card-img4.jpg"
+                    alt="Робота категорії маркетинг"
+                    width="370"
+                    height="294"
+                /></picture>
                 <p class="hint__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -178,13 +330,37 @@
             </li>
             <li class="card__item">
               <div class="hint">
-                <img
-                  class="photo"
-                  src="./images/img-portfolio-5.jpg"
-                  alt="Робота категорії приложение"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desk-card-img5.jpg    1x,
+                      ./images/desk-card-img5@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tab-card-img5.jpg    1x,
+                      ./images/tab-card-img5@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mob-card-img5.jpg    1x,
+                      ./images/mob-card-img5@2x.jpg 2x
+                    "
+                    media="(max-width: 479px)"
+                  />
+                  <img
+                    class="photo"
+                    src="./images/mob-card-img5.jpg"
+                    alt="Робота категорії приложение"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
+
                 <p class="hint__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -198,13 +374,37 @@
             </li>
             <li class="card__item">
               <div class="hint">
-                <img
-                  class="photo"
-                  src="./images/img-portfolio-6.jpg"
-                  alt="Робота категорії веб-сайт"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desk-card-img6.jpg    1x,
+                      ./images/desk-card-img6@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tab-card-img6.jpg    1x,
+                      ./images/tab-card-img6@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mob-card-img6.jpg    1x,
+                      ./images/mob-card-img6@2x.jpg 2x
+                    "
+                    media="(max-width: 479px)"
+                  />
+                  <img
+                    class="photo"
+                    src="./images/mob-card-img6.jpg"
+                    alt="Робота категорії веб-сайт"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
+
                 <p class="hint__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -218,13 +418,37 @@
             </li>
             <li class="card__item">
               <div class="hint">
-                <img
-                  class="photo"
-                  src="./images/img-portfolio-7.jpg"
-                  alt="Робота категорії дизайн"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desk-card-img7.jpg    1x,
+                      ./images/desk-card-img7@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tab-card-img7.jpg    1x,
+                      ./images/tab-card-img7@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mob-card-img7.jpg    1x,
+                      ./images/mob-card-img7@2x.jpg 2x
+                    "
+                    media="(max-width: 479px)"
+                  />
+                  <img
+                    class="photo"
+                    src="./images/mob-card-img7.jpg"
+                    alt="Робота категорії дизайн"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
+
                 <p class="hint__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -238,13 +462,33 @@
             </li>
             <li class="card__item">
               <div class="hint">
-                <img
-                  class="photo"
-                  src="./images/img-portfolio-8.jpg"
-                  alt="Робота категорії маркетинг"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desk-card-img8.jpg    1x,
+                      ./images/desk-card-img8@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)" />
+                  <source
+                    srcset="
+                      ./images/tab-card-img8.jpg    1x,
+                      ./images/tab-card-img8@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)" />
+                  <source
+                    srcset="
+                      ./images/mob-card-img8.jpg    1x,
+                      ./images/mob-card-img8@2x.jpg 2x
+                    "
+                    media="(max-width: 479px)" />
+                  <img
+                    class="photo"
+                    src="./images/mob-card-img8.jpg"
+                    alt="Робота категорії маркетинг"
+                    width="370"
+                    height="294"
+                /></picture>
+
                 <p class="hint__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -258,13 +502,36 @@
             </li>
             <li class="card__item">
               <div class="hint">
-                <img
-                  class="photo"
-                  src="./images/img-portfolio-9.jpg"
-                  alt="Робота категорії додаток"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/desk-card-img9.jpg    1x,
+                      ./images/desk-card-img9@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/tab-card-img9.jpg    1x,
+                      ./images/tab-card-img9@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/mob-card-img9.jpg    1x,
+                      ./images/mob-card-img9@2x.jpg 2x
+                    "
+                    media="(max-width: 479px)"
+                  />
+                  <img
+                    class="photo"
+                    src="./images/mob-card-img9.jpg "
+                    alt="Робота категорії додаток"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <p class="hint__text">
                   Ресурс пропонує комплексні пропозиції з різним рівнем
                   функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -376,5 +643,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

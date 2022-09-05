@@ -2,13 +2,26 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  min-width: calc((100% / 3) - 90px);
+  flex-direction: column;
+  @include tablet {
+    flex-direction: row;
+  }
+  @include desktop {
+    min-width: calc((100% / 3) - 90px);
+  }
 
   &__item {
-    width: calc((100% - 60px) / 3);
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include tablet {
+      width: calc(50% - 15px);
+      display: flex;
+      flex-direction: column;
+    }
+    @include desktop {
+      width: calc((100% - 60px) / 3);
+    }
   }
 
   &__item:hover {
@@ -19,6 +32,9 @@
   &__text {
     border: 1px solid #eeeeee;
     padding: 20px 24px;
+    @include tablet {
+      flex-grow: 1;
+    }
   }
 
   &__pos-titel {
@@ -42,6 +58,7 @@
   position: relative;
   overflow: hidden;
   &__text {
+    height: 100%;
     position: absolute;
     left: 0;
     top: 0;

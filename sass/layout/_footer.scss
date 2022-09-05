@@ -4,13 +4,31 @@
   background: var(--secondary-background);
   &__element {
     display: flex;
-    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 60px;
+    @include tablet {
+      gap: 0px;
+    }
+    @include desktop {
+      align-items: baseline;
+      flex-wrap: nowrap;
+    }
+    //
   }
 }
 
 .footer-address-wrap {
-  width: calc((50% - 45px) / 2);
-  margin-right: 30px;
+  width: 100%;
+
+  text-align: center;
+  @include tablet {
+    width: 50%;
+  }
+  @include desktop {
+    width: calc((50% - 45px) / 2);
+    margin-right: 30px;
+    text-align: left;
+  }
 }
 
 .logo__bottom-element {
@@ -38,8 +56,18 @@
 }
 
 .footer-soc-wrap {
-  width: calc((50% - 45px) / 2);
-  margin-right: 30px;
+  width: 100%;
+
+  text-align: center;
+  @include tablet {
+    width: 50%;
+  }
+  @include desktop {
+    width: calc((50% - 45px) / 2);
+    margin-right: 30px;
+    text-align: left;
+  }
+
   &__titel {
     font-weight: 700;
     font-size: 14px;
@@ -52,7 +80,9 @@
 }
 
 .footer-social-nets {
-  justify-content: start;
+  @include desktop {
+    justify-content: start;
+  }
   &__link {
     background-color: rgba(255, 255, 255, 0.1);
     color: var(--white-text-color);
@@ -61,12 +91,29 @@
 
 .form-subscribe {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   align-items: flex-end;
-  width: calc(50% - 15px);
+  width: 100%;
+
+  justify-content: center;
+  text-align: center;
+  @include tablet {
+    margin-top: 60px;
+  }
+  @include desktop {
+    width: calc(50% - 15px);
+    margin-top: 0px;
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
 }
 .subscribe {
   width: 100%;
-  margin-right: 12px;
+  @include desktop {
+    gap: 12px;
+  }
+  //margin-right: 12px;
   &__lable {
     display: block;
     margin-bottom: 20px;
@@ -76,6 +123,9 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--white-text-color);
+    @include desktop {
+      text-align: left;
+    }
   }
   &__input {
     display: flex;
@@ -92,8 +142,16 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background-color: transparent;
+    @include tablet {
+      width: 450px;
+      margin: 0 auto;
+    }
+    @include desktop {
+      width: 358px;
+    }
   }
   &__button {
+    //width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

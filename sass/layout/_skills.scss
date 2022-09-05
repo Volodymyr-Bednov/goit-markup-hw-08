@@ -1,12 +1,26 @@
 .skills-list {
-  // display: flex;
-  // column-gap: 30px;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+.skills__item {
+  width: 100%;
+  @include tablet {
+    //max-width: 354px;
+    max-width: calc((100% - 60px) / 2);
+  }
+  @include desktop {
+    //max-width: 270px;
+    min-width: calc((100% - 120px) / 4);
+  }
 }
 .icon-skill-comtent {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 270px;
   height: 120px;
   background-color: var(--tean-section-background);
   border-radius: 4px;
@@ -19,13 +33,21 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   color: var(--title-text-color);
+  @include tablet {
+    text-align: left;
+  }
 }
 
 .skill-list-text {
-  max-width: 270px;
+  //max-width: 270px;
+  margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+  @include tablet {
+    margin-bottom: 0;
+  }
 }
