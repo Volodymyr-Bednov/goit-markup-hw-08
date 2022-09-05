@@ -429,7 +429,7 @@ a {
   padding-bottom: 118px;
   text-align: center;
   background-color: var(--secondary-background);
-  background-image: var(--header-bg-gradient), url(../../images/mob-header.jpg);
+  background-image: var(--header-bg-gradient), url(../images/mob-header.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -437,24 +437,24 @@ a {
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: var(--header-bg-gradient), url(../../images/mob-header@2x.jpg);
+    background-image: var(--header-bg-gradient), url(../images/mob-header@2x.jpg);
   }
 }
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: var(--header-bg-gradient), url(../../images/tab-header.jpg);
+    background-image: var(--header-bg-gradient), url(../images/tab-header.jpg);
     padding-top: 204px;
     padding-bottom: 204px;
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: var(--header-bg-gradient) t, url(../../images/tab-header@2x.jpg);
+    background-image: var(--header-bg-gradient) t, url(../images/tab-header@2x.jpg);
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    background-image: var(--header-bg-gradient), url(../../images/desk-header.jpg);
+    background-image: var(--header-bg-gradient), url(../images/desk-header.jpg);
     max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
@@ -462,7 +462,7 @@ a {
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: var(--header-bg-gradient), url(../../images/desk-header@2x.jpg);
+    background-image: var(--header-bg-gradient), url(../images/desk-header@2x.jpg);
   }
 }
 

@@ -3,36 +3,34 @@
   padding-bottom: 118px;
   text-align: center;
   background-color: var(--secondary-background);
-  background-image: var(--header-bg-gradient), url(../../images/mob-header.jpg);
+  background-image: var(--header-bg-gradient), url(../images/mob-header.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin: 0 auto;
   @include retina {
     background-image: var(--header-bg-gradient),
-      url(../../images/mob-header@2x.jpg);
+      url(../images/mob-header@2x.jpg);
   }
 
   @include tablet {
-    background-image: var(--header-bg-gradient),
-      url(../../images/tab-header.jpg);
+    background-image: var(--header-bg-gradient), url(../images/tab-header.jpg);
     padding-top: 204px;
     padding-bottom: 204px;
     @include retina {
       background-image: var(--header-bg-gradient) t,
-        url(../../images/tab-header@2x.jpg);
+        url(../images/tab-header@2x.jpg);
     }
   }
 
   @include desktop {
-    background-image: var(--header-bg-gradient),
-      url(../../images/desk-header.jpg);
+    background-image: var(--header-bg-gradient), url(../images/desk-header.jpg);
     max-width: 1600px;
     padding-top: 200px;
     padding-bottom: 200px;
     @include retina {
       background-image: var(--header-bg-gradient),
-        url(../../images/desk-header@2x.jpg);
+        url(../images/desk-header@2x.jpg);
     }
   }
 }
